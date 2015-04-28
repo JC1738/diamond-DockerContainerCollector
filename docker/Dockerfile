@@ -11,8 +11,8 @@ RUN apt-get update && \
 
 #git clone diamond, docker-py and the collector
 RUN git clone https://github.com/python-diamond/Diamond.git
-RUN git clone https://github.com/docker/docker-py.git
-RUN git clone https://github.com/lesaux/diamond-DockerContainerCollector.git
+RUN git clone -b 1.2.0-release https://github.com/docker/docker-py.git
+RUN git clone https://github.com/JC1738/diamond-DockerContainerCollector.git
 
 #compile and install diamond
 WORKDIR /Diamond
